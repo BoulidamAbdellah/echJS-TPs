@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    script(src="https://cdn.tailwindcss.com")
+    title Add a Book
+  body.bg-gray-100.p-8
+    h1.text-2xl.font-bold.mb-4 Add a New Book
+    form(action="/books/add" method="POST" class="space-y-4 max-w-md bg-white p-6 rounded-lg shadow")
+      input.border.p-2.w-full(name="title" placeholder="Title" required)
+      input.border.p-2.w-full(name="author" placeholder="Author" required)
+      input.border.p-2.w-full(type="number" name="pages" placeholder="Total pages" required)
+      input.border.p-2.w-full(type="number" name="pagesRead" placeholder="Pages read" required)
+      input.border.p-2.w-full(type="number" name="price" placeholder="Price" required)
+      input.border.p-2.w-full(name="suggestedBy" placeholder="Suggested by")
+      select.border.p-2.w-full(name="status")
+        option Read
+        option Re-read
+        option DNF
+        option Currently reading
+        option Returned Unread
+        option Want to read
+      select.border.p-2.w-full(name="format")
+        option Print
+        option PDF
+        option Ebook
+        option AudioBook
+      button(class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600") Save
+

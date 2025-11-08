@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Liste des livres
+    script(src="https://cdn.tailwindcss.com") // Tailwind CDN
+  body(class="bg-gray-100 p-6")
+    h1(class="text-2xl font-bold mb-4") Liste des livres
+
+    table(class="min-w-full border border-gray-300")
+      thead(class="bg-gray-200")
+        tr
+          th(class="p-2 border") Titre
+          th(class="p-2 border") Auteur
+          th(class="p-2 border") Année
+      tbody
+        each book in books
+          tr
+            td(class="p-2 border")= book.title
+            td(class="p-2 border")= book.author
+            td(class="p-2 border")= book.year

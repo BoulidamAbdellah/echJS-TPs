@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    script(src="https://cdn.tailwindcss.com")
+    title Edit Book
+  body.bg-gray-100.p-8
+    h1.text-2xl.font-bold.mb-4 Edit Book
+
+    form(method="POST", action=`/books/edit/${book.id}`, class="space-y-4")
+      input(type="text", name="title", value=book.title, required, class="border p-2 w-full rounded")
+      input(type="text", name="author", value=book.author, required, class="border p-2 w-full rounded")
+      input(type="number", name="pages", value=book.pages, required, class="border p-2 w-full rounded")
+      input(type="number", name="pagesRead", value=book.pagesRead, required, class="border p-2 w-full rounded")
+      select(name="status", class="border p-2 w-full rounded")
+        option(value="In Progress", selected=book.status==="In Progress") In Progress
+        option(value="Finished", selected=book.status==="Finished") Finished
+      select(name="format", class="border p-2 w-full rounded")
+        option(value="Paper", selected=book.format==="Paper") Paper
+        option(value="Digital", selected=book.format==="Digital") Digital
+      button(type="submit", class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600") Save Changes
+
+    a(href="/list", class="block mt-4 text-blue-500 hover:underline") ← Back to list

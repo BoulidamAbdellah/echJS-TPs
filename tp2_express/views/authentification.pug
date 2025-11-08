@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Login
+    // Lien CDN Tailwind
+    script(src="https://cdn.tailwindcss.com")
+  body(class="bg-gray-100 flex items-center justify-center h-screen")
+    form(class="bg-white p-6 rounded shadow-md w-80" action="/login" method="POST")
+      h1(class="text-2xl font-bold mb-4") Connexion
+      label(for="email") Email
+      input(type="text" name="email" class="border p-2 w-full mb-4")
+      label(for="password") Mot de passe
+      input(type="password" name="password" class="border p-2 w-full mb-4")
+      button(type="submit" class="bg-blue-500 text-white p-2 w-full rounded") Se connecter
