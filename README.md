@@ -79,9 +79,5 @@ Typical structure and run notes (what to check inside tp_ts):
 
 ---
 
-## Notes
-- The tp2_express server currently connects to a hard-coded MongoDB URI. For production or multi-environment use, externalize this to an environment variable.
-- If you want, I can add more precise run commands and example users once I inspect the tp_ts folder contents and the Pug templates inside tp2_express/views.
-
 ```
 ```
